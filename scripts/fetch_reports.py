@@ -7,7 +7,15 @@ REPORTS_DIR = "reports"
 HEADERS = {"User-Agent": "Mozilla/5.0"}
 
 def write_header(date):
-    return f"# Bug Bounty Report — {date}\n\n"
+    return f"""---
+layout: default
+parent: Reports
+title: {date}
+---
+
+# Bug Bounty Report — {date}
+
+"""
 
 # 1. HackerOne Disclosed Reports
 def fetch_hackerone():
