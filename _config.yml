@@ -1,0 +1,25 @@
+title: "Daily Bug Bounty Reports"
+description: "Automatically updated bug bounty and PoC intelligence feed."
+
+remote_theme: "just-the-docs/just-the-docs"
+
+color_scheme: "dark"
+search_enabled: true
+
+collections:
+  reports:
+    output: true
+
+defaults:
+  - scope:
+      path: "reports"
+      type: "reports"
+    values:
+      layout: "default"
+      parent: "Reports"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - scripts
+  - .github
