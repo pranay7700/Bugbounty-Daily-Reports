@@ -1,0 +1,32 @@
+name: Daily Bug Bounty Updates
+
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install Dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run Script
+        run: python scripts/fetch_reports.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name "GitHub Action"
+          git add reports/*.md
+          git commit -m "Daily Bug Bounty Update $(date)" || echo "No new changes"
+          git push
