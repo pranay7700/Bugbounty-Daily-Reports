@@ -12,3 +12,4 @@ parent: Reports
 ---
 def write_header(date):
     return f"---\nparent: Reports\n---\n\n# Bug Bounty Report — {date}\n\n"
+
