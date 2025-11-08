@@ -11,3 +11,8 @@ exclude:
   - .github/
   - scripts/
   - README.md
+
+
+git add _config.yml Gemfile
+git commit -m "Fix Pages build with Just-the-Docs remote theme"
+git push
