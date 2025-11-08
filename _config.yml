@@ -1,18 +1,28 @@
-title: Daily Bug Bounty Reports
-description: Automatically updated bug bounty and PoC intelligence feed.
+title: "Daily Bug Bounty Reports"
+description: "Automatically updated bug bounty and PoC intelligence feed."
 
-# ✅ Use remote theme (works on GitHub Pages)
+# ✅ Correct way to use Just-the-Docs on GitHub Pages
 remote_theme: just-the-docs/just-the-docs
 
+# Optional UI Settings
 color_scheme: dark
-markdown: GFM
+search_enabled: true
 
+# ✅ Make "reports" folder appear as its own section
+collections:
+  reports:
+    output: true
+
+defaults:
+  - scope:
+      path: "reports"
+    values:
+      layout: default
+      parent: "Reports"
+
+# Ignore non-website folders
 exclude:
   - .github/
   - scripts/
-  - README.md
-
-
-git add _config.yml Gemfile
-git commit -m "Fix Pages build with Just-the-Docs remote theme"
-git push
+  - Gemfile
+  - Gemfile.lock
