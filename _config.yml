@@ -1,0 +1,8 @@
+title: Daily Bug Bounty Reports
+description: Automatically updated bug bounty and PoC intelligence feed.
+theme: just-the-docs
+color_scheme: dark
+markdown: GFM
+exclude:
+  - .github/
+  - scripts/
