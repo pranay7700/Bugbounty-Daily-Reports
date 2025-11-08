@@ -1,8 +1,13 @@
 title: Daily Bug Bounty Reports
 description: Automatically updated bug bounty and PoC intelligence feed.
-theme: just-the-docs
+
+# ✅ Use remote theme (works on GitHub Pages)
+remote_theme: just-the-docs/just-the-docs
+
 color_scheme: dark
 markdown: GFM
+
 exclude:
   - .github/
   - scripts/
+  - README.md
